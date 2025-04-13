@@ -174,6 +174,7 @@
             // 
             // DgPayMode
             // 
+            DgPayMode.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgPayMode.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgPayMode.Location = new Point(27, 74);
             DgPayMode.Name = "DgPayMode";
