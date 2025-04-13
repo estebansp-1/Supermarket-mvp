@@ -311,8 +311,11 @@
             // 
             TxtPayModeId.Location = new Point(30, 38);
             TxtPayModeId.Name = "TxtPayModeId";
+            TxtPayModeId.ReadOnly = true;
             TxtPayModeId.Size = new Size(170, 23);
             TxtPayModeId.TabIndex = 1;
+            TxtPayModeId.Text = "0";
+            TxtPayModeId.TextAlign = HorizontalAlignment.Right;
             TxtPayModeId.UseWaitCursor = true;
             TxtPayModeId.TextChanged += TxtPayModeId_TextChanged;
             // 

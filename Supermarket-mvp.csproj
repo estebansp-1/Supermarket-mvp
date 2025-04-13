@@ -10,6 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Presenters\NewFolder\**" />
+    <EmbeddedResource Remove="Presenters\NewFolder\**" />
+    <None Remove="Presenters\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
   </ItemGroup>
 
