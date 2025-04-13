@@ -31,12 +31,18 @@
             panel1 = new Panel();
             BtnPayMode = new Button();
             pictureBox1 = new PictureBox();
+            BtnExit = new Button();
+            BtnProviders = new Button();
+            BtnProducts = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(BtnProducts);
+            panel1.Controls.Add(BtnProviders);
+            panel1.Controls.Add(BtnExit);
             panel1.Controls.Add(BtnPayMode);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
@@ -49,11 +55,12 @@
             // 
             BtnPayMode.BackgroundImage = Properties.Resources.buy1;
             BtnPayMode.BackgroundImageLayout = ImageLayout.Zoom;
-            BtnPayMode.Location = new Point(3, 84);
+            BtnPayMode.Location = new Point(3, 82);
             BtnPayMode.Name = "BtnPayMode";
             BtnPayMode.Size = new Size(194, 77);
             BtnPayMode.TabIndex = 1;
             BtnPayMode.UseVisualStyleBackColor = true;
+            BtnPayMode.Click += BtnPayMode_Click;
             // 
             // pictureBox1
             // 
@@ -65,12 +72,46 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // BtnExit
+            // 
+            BtnExit.BackgroundImage = Properties.Resources.cerrar_sesion;
+            BtnExit.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnExit.Dock = DockStyle.Bottom;
+            BtnExit.Location = new Point(0, 370);
+            BtnExit.Name = "BtnExit";
+            BtnExit.Size = new Size(200, 80);
+            BtnExit.TabIndex = 2;
+            BtnExit.UseVisualStyleBackColor = true;
+            BtnExit.Click += button1_Click;
+            // 
+            // BtnProviders
+            // 
+            BtnProviders.BackgroundImage = Properties.Resources.providers;
+            BtnProviders.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnProviders.Location = new Point(3, 269);
+            BtnProviders.MaximumSize = new Size(500, 500);
+            BtnProviders.Name = "BtnProviders";
+            BtnProviders.Size = new Size(194, 88);
+            BtnProviders.TabIndex = 3;
+            BtnProviders.UseVisualStyleBackColor = true;
+            // 
+            // BtnProducts
+            // 
+            BtnProducts.BackgroundImage = Properties.Resources.products;
+            BtnProducts.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnProducts.Location = new Point(3, 171);
+            BtnProducts.Name = "BtnProducts";
+            BtnProducts.Size = new Size(194, 83);
+            BtnProducts.TabIndex = 5;
+            BtnProducts.UseVisualStyleBackColor = true;
+            // 
             // MainView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
+            IsMdiContainer = true;
             Name = "MainView";
             Text = "Supermarket";
             WindowState = FormWindowState.Maximized;
@@ -85,5 +126,8 @@
         private Panel panel1;
         private Button BtnPayMode;
         private PictureBox pictureBox1;
+        private Button BtnExit;
+        private Button BtnProviders;
+        private Button BtnProducts;
     }
 }
